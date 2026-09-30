@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>PlanAway | AI Result</title>
+
+<link rel="stylesheet" href="css/result.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<div class="overlay"></div>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<h2>PlanAway</h2>
+
+</div>
+
+<div>
+
+<button id="newTripBtn">
+
+New Trip
+
+</button>
+
+</div>
+
+</nav>
+
+<section class="result-container">
+
+<div class="page-title">
+
+<h1>
+
+Your AI Travel Plan
+
+</h1>
+
+<p>
+
+Generated using Google Gemini AI
+
+</p>
+
+</div>
+
+<div id="tripSummary"
+
+class="glass-card">
+
+<h2>
+
+Trip Summary
+
+</h2>
+
+</div>
+
+<div id="destinationSection"
+
+class="glass-card">
+
+<h2>
+
+Recommended Destinations
+
+</h2>
+
+</div>
+
+<div id="routeSection"
+
+class="glass-card">
+
+<h2>
+
+Travel Routes
+
+</h2>
+
+</div>
+
+<div id="itinerarySection"
+
+class="glass-card">
+
+<h2>
+
+Day by Day Itinerary
+
+</h2>
+
+</div>
+
+<div id="budgetSection"
+
+class="glass-card">
+
+<h2>
+
+Budget Breakdown
+
+</h2>
+
+</div>
+
+<div id="hotelSection"
+
+class="glass-card">
+
+<h2>
+
+Hotels
+
+</h2>
+
+</div>
+
+<div id="tipsSection"
+
+class="glass-card">
+
+<h2>
+
+Local Tips
+
+</h2>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<p>
+
+Powered by Google Gemini AI • Firebase • Three.js
+
+</p>
+
+</footer>
+
+<!-- ========================= -->
+<!-- LOADING SCREEN -->
+<!-- ========================= -->
+
+<div id="loadingScreen" class="loading-screen">
+
+<div class="loader"></div>
+
+<h2>
+
+Building your perfect trip...
+
+</h2>
+
+</div>
+
+<!-- ========================= -->
+<!-- THREE JS -->
+<!-- ========================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+
+<!-- ========================= -->
+<!-- FIREBASE -->
+<!-- ========================= -->
+
+<script type="module" src="js/firebase.js"></script>
+
+<!-- ========================= -->
+<!-- RESULT JS -->
+<!-- ========================= -->
+
+<script type="module" src="js/result.js"></script>
+
+</body>
+
+</html>

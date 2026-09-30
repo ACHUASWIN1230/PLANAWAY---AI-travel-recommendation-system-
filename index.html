@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PlanAway | AI Travel Planner</title>
+
+    <meta name="description"
+        content="PlanAway is an AI-powered travel planner that creates personalized Indian travel itineraries in seconds.">
+
+    <link rel="icon" href="assets/logo/favicon.png">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- ===================== -->
+    <!-- 3D BACKGROUND -->
+    <!-- ===================== -->
+
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="gradient-overlay"></div>
+
+
+
+    <!-- ===================== -->
+    <!-- NAVBAR -->
+    <!-- ===================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <span class="logo-icon">✈</span>
+
+            <span class="logo-text">PlanAway</span>
+
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="#features">Features</a></li>
+
+            <li><a href="#how">How It Works</a></li>
+
+            <li><a href="#about">About</a></li>
+
+        </ul>
+
+        <button class="nav-login-btn" id="navLoginBtn">
+
+            Sign In
+
+        </button>
+
+    </nav>
+
+
+
+    <!-- ===================== -->
+    <!-- HERO -->
+    <!-- ===================== -->
+
+    <section class="hero">
+
+        <div class="hero-left">
+
+            <div class="ai-badge">
+
+                ✨ Powered by Google Gemini AI
+
+            </div>
+
+            <h1>
+
+                Your Journey,
+
+                <span>Beautifully Planned.</span>
+
+            </h1>
+
+            <p>
+
+                Discover personalized destinations, intelligent routes,
+                day-by-day itineraries and complete budget estimates —
+                all generated instantly using Artificial Intelligence.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <button id="googleLoginBtn" class="primary-btn">
+
+                    Sign in with Google
+
+                </button>
+
+                <a href="#features" class="secondary-btn">
+
+                    Explore Features
+
+                </a>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div class="stat">
+
+                    <h2>1500+</h2>
+
+                    <p>AI Requests / Day</p>
+
+                </div>
+
+                <div class="stat">
+
+                    <h2>₹0</h2>
+
+                    <p>Project Cost</p>
+
+                </div>
+
+                <div class="stat">
+
+                    <h2>100%</h2>
+
+                    <p>Personalized Trips</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="hero-right">
+
+            <!-- Three.js renders here -->
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ===================== -->
+    <!-- FEATURES -->
+    <!-- ===================== -->
+
+    <section id="features" class="features">
+
+        <h2>
+
+            Why Choose PlanAway?
+
+        </h2>
+
+        <p class="section-subtitle">
+
+            Everything you need to plan your perfect trip.
+
+        </p>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+
+                <div class="feature-icon">🧠</div>
+
+                <h3>AI Recommendations</h3>
+
+                <p>
+
+                    Get personalized destinations based on
+                    your interests, budget and travel style.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">🗺</div>
+
+                <h3>Smart Route Planning</h3>
+
+                <p>
+
+                    Compare train, bus, flight and self-drive
+                    routes with estimated costs.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">📅</div>
+
+                <h3>Day-by-Day Itinerary</h3>
+
+                <p>
+
+                    Morning, afternoon and evening plans
+                    generated instantly.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">💰</div>
+
+                <h3>Budget Estimator</h3>
+
+                <p>
+
+                    Know exactly how much your trip may cost
+                    before you travel.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ===================== -->
+    <!-- HOW IT WORKS -->
+    <!-- ===================== -->
+
+    <section id="how" class="how">
+
+        <h2>
+
+            How It Works
+
+        </h2>
+
+        <div class="timeline">
+
+            <div class="step">
+
+                <span>01</span>
+
+                <h3>Sign In</h3>
+
+                <p>
+
+                    Login securely using your Google account.
+
+                </p>
+
+            </div>
+
+            <div class="step">
+
+                <span>02</span>
+
+                <h3>Enter Preferences</h3>
+
+                <p>
+
+                    Tell us your budget, destination,
+                    interests and travel style.
+
+                </p>
+
+            </div>
+
+            <div class="step">
+
+                <span>03</span>
+
+                <h3>Generate Trip</h3>
+
+                <p>
+
+                    Gemini AI creates your personalized travel plan
+                    within seconds.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ===================== -->
+    <!-- ABOUT -->
+    <!-- ===================== -->
+
+    <section id="about" class="about">
+
+        <h2>
+
+            Travel Smarter with AI
+
+        </h2>
+
+        <p>
+
+            PlanAway combines Google Gemini AI,
+            Firebase Authentication,
+            Firestore Database and Three.js
+            to create a modern travel planning experience.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- ===================== -->
+    <!-- FOOTER -->
+    <!-- ===================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+
+            ✈ PlanAway
+
+        </div>
+
+        <p>
+
+            Built with ❤️ using Google Gemini AI,
+            Firebase & Three.js
+
+        </p>
+
+        <p>
+
+            © 2026 PlanAway. All Rights Reserved.
+
+        </p>
+
+    </footer>
+<script type="module" src="js/firebase.js"></script>
+<script type="module" src="js/auth.js"></script>
+<script type="module" src="js/landing.js"></script>
+    <!-- ===================== -->
+    <!-- LANDING -->
+    <!-- ===================== -->
+   
+
+</body>
+
+</html>

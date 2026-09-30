@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PlanAway | Plan Your Trip</title>
+
+<link rel="stylesheet" href="css/home.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- 3D Background -->
+<canvas id="bg-canvas"></canvas>
+
+<div class="overlay"></div>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        <h2>PlanAway</h2>
+
+    </div>
+
+
+    <div class="nav-right">
+
+        <button id="historyBtn" class="nav-btn">
+
+            History
+
+        </button>
+
+
+        <div class="profile">
+
+            <img id="userPhoto"
+
+                 src="assets/profile/default-user.png"
+
+                 alt="User">
+
+
+            <div>
+
+                <h4 id="userName">
+
+                    Loading...
+
+                </h4>
+
+
+                <p id="userEmail">
+
+                    Please Wait
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <button id="logoutBtn"
+
+                class="logout-btn">
+
+            Sign Out
+
+        </button>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+
+    <div class="hero-left">
+
+        <h1>
+
+            Create Your
+
+            <span>AI Powered Journey</span>
+
+        </h1>
+
+
+        <p>
+
+            Tell us your travel preferences.
+
+            PlanAway AI will analyze your budget,
+
+            interests, travel distance and group size
+
+            to recommend the most suitable destination
+
+            for you.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="hero-right">
+
+        <div class="glass-card">
+
+
+            <h2>
+
+                Travel Preferences
+
+            </h2>
+
+
+            <form id="tripForm">
+
+
+                <!-- ================= FROM ================= -->
+
+                <div class="input-group">
+
+                    <label>
+
+                        Travelling From
+
+                    </label>
+
+
+                    <input
+
+                        type="text"
+
+                        id="from"
+
+                        placeholder="Eg. Chennai"
+
+                        required>
+
+                </div>
+
+
+
+                <!-- ================= DAYS + BUDGET ================= -->
+
+                <div class="row">
+
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Days
+
+                        </label>
+
+
+                        <input
+
+                            type="number"
+
+                            id="days"
+
+                            min="1"
+
+                            max="30"
+
+                            placeholder="Eg. 5"
+
+                            required>
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Budget (₹)
+
+                        </label>
+
+
+                        <input
+
+                            type="number"
+
+                            id="budget"
+
+                            min="1000"
+
+                            placeholder="Eg. 10000"
+
+                            required>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= TRAVELLERS + STYLE ================= -->
+
+                <div class="input-group">
+
+    <label>
+
+        Travellers
+
+    </label>
+
+    <input
+
+        type="number"
+
+        id="travellers"
+
+        value="1"
+
+        min="1">
+
+</div>
+
+
+                <!-- ================= INTERESTS ================= -->
+
+                <div class="input-group">
+
+
+                    <label>
+
+                        Interests
+
+                    </label>
+
+
+                    <div class="interest-grid">
+
+
+                        <label class="chip">
+
+                            <input
+
+                                type="checkbox"
+
+                                value="Beach">
+
+
+                            <span>
+
+                                🏖 Beach
+
+                            </span>
+
+                        </label>
+
+
+
+                        <label class="chip">
+
+                            <input
+
+                                type="checkbox"
+
+                                value="Hills">
+
+
+                            <span>
+
+                                🏔 Hills
+
+                            </span>
+
+                        </label>
+
+
+
+                        <label class="chip">
+
+                            <input
+
+                                type="checkbox"
+
+                                value="Adventure">
+
+
+                            <span>
+
+                                🥾 Adventure
+
+                            </span>
+
+                        </label>
+
+
+
+                        <label class="chip">
+
+                            <input
+
+                                type="checkbox"
+
+                                value="Food">
+
+
+                            <span>
+
+                                🍜 Food
+
+                            </span>
+
+                        </label>
+
+
+
+                        <label class="chip">
+
+                            <input
+
+                                type="checkbox"
+
+                                value="Wildlife">
+
+
+                            <span>
+
+                                🦁 Wildlife
+
+                            </span>
+
+                        </label>
+
+
+
+                        <label class="chip">
+
+                            <input
+
+                                type="checkbox"
+
+                                value="Photography">
+
+
+                            <span>
+
+                                📷 Photography
+
+                            </span>
+
+                        </label>
+
+
+
+                        <label class="chip">
+
+                            <input
+
+                                type="checkbox"
+
+                                value="Shopping">
+
+
+                            <span>
+
+                                🛍 Shopping
+
+                            </span>
+
+                        </label>
+
+
+
+                        <label class="chip">
+
+                            <input
+
+                                type="checkbox"
+
+                                value="Spiritual">
+
+
+                            <span>
+
+                                🛕 Spiritual
+
+                            </span>
+
+                        </label>
+
+
+
+                        <label class="chip">
+
+                            <input
+
+                                type="checkbox"
+
+                                value="Relaxation">
+
+
+                            <span>
+
+                                🌴 Relax
+
+                            </span>
+
+                        </label>
+
+
+
+                        <label class="chip">
+
+                            <input
+
+                                type="checkbox"
+
+                                value="Heritage">
+
+
+                            <span>
+
+                                🏛 Heritage
+
+                            </span>
+
+                        </label>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= TRAVEL MODE ================= -->
+
+                <div class="input-group">
+
+
+                    <label>
+
+                        Preferred Travel Mode
+
+                    </label>
+
+
+                    <select id="travelMode">
+
+
+                        <option value="Any">
+
+                            Any
+
+                        </option>
+
+
+                        <option value="Train">
+
+                            Train
+
+                        </option>
+
+
+                        <option value="Bus">
+
+                            Bus
+
+                        </option>
+
+
+                        <option value="Flight">
+
+                            Flight
+
+                        </option>
+
+
+                        <option value="Self Drive">
+
+                            Self Drive
+
+                        </option>
+
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- ================= SPECIAL REQUEST ================= -->
+
+                <div class="input-group">
+
+
+                    <label>
+
+                        Special Requests
+
+                    </label>
+
+
+                    <textarea
+
+                        id="special"
+
+                        rows="5"
+
+                        placeholder="Example: Family friendly, honeymoon, avoid trekking, vegetarian food...">
+
+                    </textarea>
+
+                </div>
+
+
+
+                <!-- ================= BUTTON ================= -->
+
+                <button
+
+                    type="submit"
+
+                    class="generate-btn">
+
+
+                    🔍 Find My Perfect Destination
+
+                </button>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <p>
+
+        PlanAway © 2026
+
+    </p>
+
+</footer>
+
+
+
+<!-- ================= LOADING SCREEN ================= -->
+
+<div id="loadingScreen"
+
+     class="loading-screen">
+
+
+    <div class="loader"></div>
+
+
+    <h2>
+
+        PlanAway AI is Finding Your Perfect Destination...
+
+    </h2>
+
+</div>
+
+
+
+<!-- ================= LIBRARIES ================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+
+
+
+<!-- ================= FIREBASE ================= -->
+
+<script
+
+    type="module"
+
+    src="js/firebase.js">
+
+</script>
+
+
+
+<!-- ================= HOME JS ================= -->
+
+<script
+
+    type="module"
+
+    src="js/home.js">
+
+</script>
+
+
+</body>
+
+</html>
